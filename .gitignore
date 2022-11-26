@@ -1,0 +1,18 @@
+# PostgreSQL
+postgres_data/
+*.log
+
+# Environment
+.env
+
+# IDE
+.idea/
+*.swp
+
+# Build scripts (local)
+build_*.py
+build_history.sh
+__pycache__/
+
+# Builder prompt (local reference)
+*-BUILDER-PROMPT.md
