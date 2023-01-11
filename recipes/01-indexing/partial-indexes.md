@@ -29,7 +29,7 @@ Execution Time: 423.334 ms
 Create a partial index only for pending orders.
 
 ```sql
-CREATE INDEX idx_orders_active ON orders (created_at DESC) WHERE status = 'pending';
+CREATE INDEX idx_orders_pending ON orders (created_at DESC) WHERE status = 'pending';
 ```
 
 ### EXPLAIN ANALYZE (after)
