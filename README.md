@@ -62,4 +62,13 @@ This cookbook demonstrates PostgreSQL performance optimization techniques throug
 
 ## Table of Contents
 
-(Recipes will be linked as they are added)
+### 1. Indexing Strategies
+- [Composite index column order matters](recipes/01-indexing/composite-index-order-matters.md)
+- [Partial indexes for skewed data](recipes/01-indexing/partial-indexes.md)
+- [Covering indexes with INCLUDE](recipes/01-indexing/covering-indexes.md)
+- [GIN indexes for JSONB queries](recipes/01-indexing/gin-for-jsonb.md)
+- [GIN vs GiST for full-text search](recipes/01-indexing/gin-vs-gist-for-fulltext.md)
+- [Index-only scans optimization](recipes/01-indexing/index-only-scans.md)
+
+(More sections coming)
+
