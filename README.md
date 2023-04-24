@@ -70,5 +70,14 @@ This cookbook demonstrates PostgreSQL performance optimization techniques throug
 - [GIN vs GiST for full-text search](recipes/01-indexing/gin-vs-gist-for-fulltext.md)
 - [Index-only scans optimization](recipes/01-indexing/index-only-scans.md)
 
-(More sections coming)
+
+
+### 2. Query Patterns
+- [EXISTS vs IN vs JOIN](recipes/02-query-patterns/exists-vs-in-vs-join.md)
+- [CTE vs subquery performance](recipes/02-query-patterns/cte-vs-subquery-performance.md)
+- [LATERAL JOIN patterns](recipes/02-query-patterns/lateral-join-patterns.md)
+- [Window functions for deduplication](recipes/02-query-patterns/window-functions-for-dedup.md)
+- [Batch upsert with ON CONFLICT](recipes/02-query-patterns/batch-upsert-on-conflict.md)
+- [Keyset pagination vs OFFSET](recipes/02-query-patterns/pagination-keyset-vs-offset.md)
+
 
