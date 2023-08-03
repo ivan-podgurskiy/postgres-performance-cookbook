@@ -40,11 +40,14 @@ SELECT random_first_name(), random_last_name(),
     '2020-01-01'::timestamp + (random()*365*2||' days')::interval
 FROM generate_series(1, 500000);
 
-INSERT INTO documents (patient_id, doc_type, status, content_text, created_at)
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS metadata JSONB;
+
+INSERT INTO documents (patient_id, doc_type, status, content_text, metadata, created_at)
 SELECT ceil(random()*500000),
     CASE floor(random()*4) WHEN 0 THEN 'order'::doc_type WHEN 1 THEN 'note'::doc_type WHEN 2 THEN 'lab'::doc_type ELSE 'imaging'::doc_type END,
     CASE WHEN random()<0.70 THEN 'completed'::doc_status WHEN random()<0.90 THEN 'processing'::doc_status WHEN random()<0.98 THEN 'pending'::doc_status ELSE 'failed'::doc_status END,
     'Medical document content. Diagnosis codes. Treatment notes. ' || repeat('Sample text. ', floor(random()*20+5)::integer),
+    json_build_object('priority', CASE WHEN random()<0.05 THEN 'urgent' WHEN random()<0.25 THEN 'high' ELSE 'normal' END, 'provider_id', floor(random()*1000))::jsonb,
     '2020-01-01'::timestamp + (random()*365*2||' days')::interval
 FROM generate_series(1, 500000);
 
