@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:15.3
+    image: postgres:16.1
     container_name: pg_performance_cookbook
     restart: unless-stopped
     environment:
@@ -24,6 +24,7 @@ services:
       -c shared_buffers=256MB
       -c maintenance_work_mem=128MB
       -c effective_cache_size=1GB
+      # PostgreSQL 16+: pg_stat_io now available for I/O monitoring
 
   pgadmin:
     image: dpage/pgadmin4:6.15
