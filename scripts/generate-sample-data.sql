@@ -49,7 +49,7 @@ SELECT ceil(random()*500000),
     'Medical document content. Diagnosis codes. Treatment notes. ' || repeat('Sample text. ', floor(random()*20+5)::integer),
     json_build_object('priority', CASE WHEN random()<0.05 THEN 'urgent' WHEN random()<0.25 THEN 'high' ELSE 'normal' END, 'provider_id', floor(random()*1000))::jsonb,
     '2020-01-01'::timestamp + (random()*365*2||' days')::interval
-FROM generate_series(1, 500000);
+FROM generate_series(1, 1000000);
 
 INSERT INTO orders (patient_id, document_id, hcpcs_code, description, status, total_amount, created_at)
 SELECT ceil(random()*500000), CASE WHEN random()<0.8 THEN ceil(random()*500000) ELSE NULL END,
