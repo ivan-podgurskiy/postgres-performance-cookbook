@@ -5,7 +5,7 @@
 
 ## Environment
 - PostgreSQL 17.2
-- 500K documents
+- 500K documents (rows= est. fixed)
 
 ## The Fix
 Composite index + GIN + tsvector. 5 search patterns.
