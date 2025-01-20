@@ -12,5 +12,8 @@ ALTER TABLE ... SET (autovacuum_vacuum_scale_factor = 0.01, ...). For 15M rows: 
 
 For 100M+ row tables: 0.2 scale factor = 20M dead tuples before vacuum - too many. Use autovacuum_vacuum_scale_factor = 0.01 or 0.001.
 
+## PG 17 Update
+VACUUM uses 20x less memory in PostgreSQL 17.
+
 ## Related Recipes
 - [Bloat detection](bloat-detection-and-fix.md)
