@@ -1,0 +1,11 @@
+name: Validate
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Markdown lint
+        run: echo "Add markdownlint if needed"
+      - name: SQL validate
+        run: echo "Add SQL validation if needed"
