@@ -11,4 +11,4 @@ Use CROSS JOIN LATERAL with LIMIT 3 in subquery. Index on (patient_id, created_a
 
 ## Related Recipes
 - [Window functions for deduplication](window-functions-for-dedup.md)
-- [Composite index order](composite-index-order-matters.md)
+- [Composite index order](../01-indexing/composite-index-order-matters.md)
