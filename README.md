@@ -1,5 +1,8 @@
 # PostgreSQL Performance Cookbook
 
+![Recipes](https://img.shields.io/badge/recipes-30-blue) ![PG](https://img.shields.io/badge/PostgreSQL-17-green) ![License](https://img.shields.io/badge/license-MIT-blue)
+
+
 A practical collection of PostgreSQL query optimization recipes, focusing on real-world performance problems and their solutions.
 
 ## Project Goals
