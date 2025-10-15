@@ -75,6 +75,9 @@ When the index was (created_at, status), PostgreSQL couldn't efficiently find al
 - **Low-cardinality first column:** If the first column has very low selectivity (like boolean columns with 95% true values), it might not help
 - **Write-heavy workload:** More indexes slow down INSERT/UPDATE operations
 
+## PG 18 Update
+PostgreSQL 18 introduces skip scan optimization — can use index even when leading column not in WHERE.
+
 ## Related Recipes
 - [Partial indexes for skewed data](partial-indexes.md)
 - [Covering indexes with INCLUDE](covering-indexes.md)
