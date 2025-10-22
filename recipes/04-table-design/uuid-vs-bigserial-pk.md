@@ -10,7 +10,7 @@ UUID vs bigserial affects insert performance, index size, B-tree efficiency.
 ## Key Points
 - bigserial: sequential, efficient B-tree
 - UUID v4: random, page splits, 2x index size
-- UUIDv7 not yet native in Postgres — use pg_uuidv7 extension for now.
+- **PG 18 Update:** uuidv7() is now native! Use native uuidv7() instead of extension.
 
 ## Related Recipes
 - [Partitioning](partitioning-by-date.md)
