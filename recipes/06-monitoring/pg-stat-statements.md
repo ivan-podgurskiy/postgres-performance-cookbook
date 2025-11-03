@@ -4,4 +4,8 @@
 Find top queries by total time, detect regressions.
 
 ## The Fix
+
+PG 18: EXPLAIN ANALYZE includes BUFFERS by default.
+
+
 shared_preload_libraries=pg_stat_statements. Query pg_stat_statements. Reset: pg_stat_statements_reset().
