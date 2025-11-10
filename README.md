@@ -1,6 +1,6 @@
 # PostgreSQL Performance Cookbook
 
-![Recipes](https://img.shields.io/badge/recipes-30-blue) ![PG](https://img.shields.io/badge/PostgreSQL-17-green) ![License](https://img.shields.io/badge/license-MIT-blue)
+![Recipes](https://img.shields.io/badge/recipes-30-blue) ![PG](https://img.shields.io/badge/PostgreSQL-18-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 
 A practical collection of PostgreSQL query optimization recipes, focusing on real-world performance problems and their solutions.
@@ -64,6 +64,14 @@ This cookbook demonstrates PostgreSQL performance optimization techniques throug
 - Full-text vs external search
 
 ## Table of Contents
+
+| PostgreSQL | Status |
+|------------|--------|
+| 15.x | Tested |
+| 16.x | Tested |
+| 17.x | Tested |
+| 18.x | Tested (Sep 2025) |
+
 
 ### 1. Indexing Strategies
 - [Composite index column order matters](recipes/01-indexing/composite-index-order-matters.md)
